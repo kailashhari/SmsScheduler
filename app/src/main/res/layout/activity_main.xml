@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="com.example.smsscheduler.MainActivity">
+
+
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="SMS Scheduler"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+
+
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number"
+            android:gravity="center"
+            android:inputType="phone" >
+        </EditText>
+
+
+    <EditText
+        android:id="@+id/etSms"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+
+        android:hint="Type your Message"
+        android:gravity="center_horizontal|top"
+        android:inputType="textMultiLine"/>
+
+
+    <Button
+        android:id="@+id/bTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="select Date and time" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/bStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Set" />
+
+        <Button
+            android:id="@+id/bCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Cancel" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -68,19 +68,19 @@ public class MainActivity extends Activity {
                 etSms.getText().clear();
                 etPhone.getText().clear();
 
-                Intent i = new Intent(getApplicationContext(),AlarmService.class);
+                Intent i = new Intent(MainActivity.this,AlarmService.class);
                 i.putExtra("msgPhone", sPhone);
                 i.putExtra("msgSmS", sSms);
 
 
-                pIntent = PendingIntent.getService(getApplicationContext(), 0, i, PendingIntent.FLAG_UPDATE_CURRENT);
+                pIntent = PendingIntent.getService(MainActivity.this, 0, i, 0);
 
                 aManager = (AlarmManager) getSystemService(ALARM_SERVICE);
                 c.setTimeInMillis(System.currentTimeMillis());
                 c.set(Calendar.HOUR_OF_DAY, hour);
                 c.set(Calendar.MINUTE, minute);
                 aManager.set(AlarmManager.RTC_WAKEUP, c.getTimeInMillis(), pIntent);
-                Toast.makeText(getApplicationContext(), "Sms scheduled! " + sSms,Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Sms scheduled! " + sSms,Toast.LENGTH_SHORT).show();
             }
         });
 

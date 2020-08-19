@@ -2,9 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.smsscheduler">
 
-    <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="22"/>
+
     <uses-permission android:name="android.permission.SEND_SMS"/>
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
 
@@ -23,6 +21,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <service android:name=".AlarmService" />
     </application>
 
 </manifest>

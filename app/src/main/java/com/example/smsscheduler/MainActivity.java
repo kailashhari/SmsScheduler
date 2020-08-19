@@ -101,7 +101,7 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 aManager.cancel(pIntent);
-                Toast.makeText(getApplicationContext(), "Cancel", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Cancelled", Toast.LENGTH_SHORT).show();
             }
         });
     }
